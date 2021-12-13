@@ -6,12 +6,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
- 
 }
 .row > * {
   flex-shrink: 1;
   flex-grow: 0;
-  
+}
+.about-img > .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.about-img > .row > * {
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 .image-line {
   margin-top: 30px;
