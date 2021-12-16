@@ -125,6 +125,10 @@ img {
 }
 .menu-main-item {
   padding-left: 5px;
+  padding-left: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-left {
   position: relative;
@@ -181,4 +185,21 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.menu-sub span {
+  position: absolute;
+  color: rgb(236, 97, 4);
+  left: -15px;
+}
+.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-main-item span {
+  display: none;
+  color: rgb(236, 97, 4);
+  padding-right: 5px;
+}
+.menu-main-item:hover span {
+  display: block;
 }
