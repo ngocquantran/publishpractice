@@ -187,7 +187,6 @@ img {
   text-overflow: ellipsis;
 }
 .menu-sub span {
-  position: absolute;
   color: rgb(236, 97, 4);
   left: -15px;
 }
