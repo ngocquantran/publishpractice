@@ -1,10 +1,4 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
-import java.time.format.DateTimeFormatter;
-import java.util.Random;
-import java.util.Scanner;
+
 
 public class Main {
 
@@ -110,9 +104,73 @@ public class Main {
 //        System.out.println("\"Xin \n chào\"");
 //
 //        System.out.println(div(9,4));
+//        int[] myArray ={3,5,0,8,-6,8,7,10};
+//        System.out.println(myArray[4]);
+//        for (int i=0; i< myArray.length;i++){
+//            System.out.println("Phần tử thứ "+i+": "+myArray[i]);
+//        }
+
+//        int[] myArray = {3,5,7,30,10,5,8,23,0,-5};
+
+//        int sum=0;
+//        for (int i=0;i<myArray.length;i++){
+//            sum+=myArray[i];
+//        }
+//        System.out.println("Tổng các giá trị phần tử là "+sum);
+//        System.out.println("Trung bình cộng các giá trị phần tử là "+sum/ myArray.length);
+//
+//        boolean isFound=false;
+//        for (int i=0;i<myArray.length;i++){
+//            if (myArray[i]<=0){
+//                System.out.println(i);
+//                isFound=true;
+//            }
+////        }
+//        if(!isFound){
+//         System.out.println("Could not file the position you need");}
+//        int[] myArray = {3, 5, 7, 30, 10, 5, 8, 23, 0, -5};
+//        for (int i=0; i< myArray.length - 1;i++) {
+//            for (int j=i;j<= myArray.length -1;j++){
+//                if (myArray[i]>myArray[j]){
+//                    int temp;
+//                    temp=myArray[i];
+//                    myArray[i]=myArray[j];
+//                    myArray[j]=temp;
+//                }
+//            }
+//
+//        }
+//         for (int i=0; i< myArray.length;i++){
+//             System.out.print(myArray[i]+", ");
+//         }
+
+
+//        int[] myArray = {3, 5, 7, 30, 10, 5, 8, 23, 0, -5};
+//        for (int i = 0; i < myArray.length - 1; i++) {
+//            for (int j = i; j <= myArray.length - 1; j++) {
+//                if (myArray[i] > myArray[j]) {
+//                    // Thao tác này đổi chỗ 2 giá trị ở 2 vị trí i, j của mảng
+//                    int temp;
+//                    temp = myArray[i];
+//                    myArray[i] = myArray[j];
+//                    myArray[j] = temp;
+//                }
+//            }
+//        }
+//        for (int i = 0; i < myArray.length; i++) {
+//            System.out.print(myArray[i] + " ");
+//        }
+        int[] myArray = {3, 5, 7, 30, 10, 5, 8, 23, 0, -5};
+        int sum=0;
+        double avg;
+        for (int i:myArray){
+            sum+=i;
+        }
+        avg= sum/myArray.length;
+        System.out.println(sum);
+        System.out.println(avg);
+
+
     }
 
-//    public static double div(int a, int b){
-//        return (double) a/b;
-//    }
 }
