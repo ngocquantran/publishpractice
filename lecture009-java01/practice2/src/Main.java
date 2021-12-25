@@ -201,7 +201,7 @@ public class Main {
         //*****************************************************************************************************
         //         THỰC HÀNH MẢNG
 
-        int[] myArray={3 , 5, 7, 30, 10, 5, 8, 23 , 0, -5};
+//        int[] myArray={3 , 5, 7, 30, 10, 5, 8, 23 , 0, -5};
 //        int[] yourArray=new int[10];
 //        yourArray[0]=3;
 //        yourArray[1]=5;
@@ -283,19 +283,100 @@ public class Main {
 //        for (int i=chuoi.length()-1;i>=0;i--){
 //            chuoinguoc=chuoinguoc+chuoi.charAt(i);
 //        }
-//        System.out.println(chuoinguoc);
-        HinhTron hinhTron=new HinhTron();
-        hinhTron.nhapBanKinh();
-        hinhTron.tinhChuVi();
-        hinhTron.tinhDienTich();
-        hinhTron.inChuVi();
-        hinhTron.inDienTich();
+////        System.out.println(chuoinguoc);
+//        HinhTron hinhTron=new HinhTron();
+//        hinhTron.nhapBanKinh();
+//        hinhTron.tinhChuVi();
+//        hinhTron.tinhDienTich();
+//        hinhTron.inChuVi();
+//        hinhTron.inDienTich();
 
 
+        //*****************************************************************************************************
+        //        ĐẢO NGƯỢC CÁC TỪ TRONG CHUỖI
+//        String chuoi="Xin chao cac ban !!";
+//        String[] words=chuoi.split(" ");
+//
+//
+//        String reversedString="";
+//        for (int i=0; i< words.length;i++){
+//            String word=words[i];
+//            String reversedWord="";
+//            for (int j=word.length()-1;j>=0;j--){
+//                reversedWord=reversedWord+word.charAt(j);
+//            }
+//            reversedString=reversedString+reversedWord+" ";
+//        }
+//        System.out.println(chuoi);
+//        System.out.println(reversedString);
+
+//*****************************************************************************************************
+        //        ĐẢO NGƯỢC CÁC PHẦN TỬ TRONG MẢNG
+//          Scanner scanner=new Scanner(System.in);
+//          System.out.println("Nhập số phần tử của mảng");
+//          int n= scanner.nextInt();
+//          int[] myArray=new int[n];
+//          for (int i=0; i<n;i++){
+//              System.out.println("Nhập phần tử tương ứng chỉ số "+i);
+//              myArray[i]= scanner.nextInt();
+//          }
+//        System.out.println("Mảng vừa nhập là ");
+//          for (int i=0;i<n;i++){
+//              System.out.print(myArray[i]+"\t");
+//          }
+//
+//          int[] mirrorArray=new int[n];
+//          for (int i=0;i<n;i++){
+//              mirrorArray[i]=myArray[(n-i-1)];
+//          }
+//        System.out.println();
+//        System.out.println("Mảng đảo ngược là ");
+//        for (int i=0;i<n;i++){
+//            System.out.print(mirrorArray[i]+"\t");
+//        }
+
+//*****************************************************************************************************
+        //        ĐẢO NGƯỢC CÁC PHẦN TỬ TRONG MẢNG
+
+//        String s1 = "hello world";
+//        String[] mang = s1.split(" ");
+//        for (int i = 0; i < mang.length; i++) {
+//            System.out.println(mang[i]);
+//        }
+//*****************************************************************************************************
+        //        ĐẢO NGƯỢC 1 SỐ
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Nhập vào số bạn muốn đảo ngược");
+//        int number= scanner.nextInt();
+//        scanner.close();
+//        int reservedNumber=0;
+//        while (number>0){
+//            int n=number%10;
+//            reservedNumber=reservedNumber*10+n;
+//            number=(number-n)/10;
+//        }
+//        System.out.println("Số sau khi đảo ngược là "+reservedNumber);
 
 
+//*****************************************************************************************************
+        //        TÁCH 1 SÓ NGUYÊN
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Nhập vào số bạn muốn tách");
+        int number= scanner.nextInt();
+        scanner.close();
+        int temp=number;
+        int count=0;
+        while (number>=1){
+            number=number/10;
+            count++;
+        }
+        while (temp>0){
+            int n=temp%10;
+            System.out.println("Số vị trí "+count+" là "+n);
+            temp=(temp-n)/10;
+            count--;
 
-
+        }
 
 
 
