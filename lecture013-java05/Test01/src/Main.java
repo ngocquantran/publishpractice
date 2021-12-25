@@ -28,15 +28,17 @@ public class Main {
             }
             System.out.println();
         }
+
+
 //        System.out.println();
 //        System.out.println("3. In hình tam giác đều");
 //        System.out.println("Nhập kích thước cạnh tam giác đều");
 //        int canhDeu= scanner.nextInt();
 //        for (int i=1;i<=canhDeu;i++){
-//            for (int j=1;j<=i;j++){
-//                System.out.print(" ");
-//                System.out.print("*  ");
+//            for (int space=1;space<=i-1;++space){
+//                System.out.println("  ");
 //            }
+//            while ()
 //            System.out.println();
 //        }
 
