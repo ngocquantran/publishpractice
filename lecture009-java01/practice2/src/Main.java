@@ -276,15 +276,20 @@ public class Main {
 
         //*****************************************************************************************************
         //         KIỂM TRA CHUỖI ĐỐI XỨNG
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Nhập chuỗi cần kiểm tra");
-        String chuoi= scanner.nextLine();
-        String chuoinguoc="";
-        for (int i=chuoi.length()-1;i>=0;i--){
-            chuoinguoc=chuoinguoc+chuoi.charAt(i);
-        }
-        System.out.println(chuoinguoc);
-
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Nhập chuỗi cần kiểm tra");
+//        String chuoi= scanner.nextLine();
+//        String chuoinguoc="";
+//        for (int i=chuoi.length()-1;i>=0;i--){
+//            chuoinguoc=chuoinguoc+chuoi.charAt(i);
+//        }
+//        System.out.println(chuoinguoc);
+        HinhTron hinhTron=new HinhTron();
+        hinhTron.nhapBanKinh();
+        hinhTron.tinhChuVi();
+        hinhTron.tinhDienTich();
+        hinhTron.inChuVi();
+        hinhTron.inDienTich();
 
 
 
@@ -296,4 +301,9 @@ public class Main {
 
 
     }
+
+
+
 }
+
+
