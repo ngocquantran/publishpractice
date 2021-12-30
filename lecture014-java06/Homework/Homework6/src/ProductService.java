@@ -27,10 +27,10 @@ public class ProductService {
             unit=ProductUnit.chiếc;
         }
 
-        System.out.println("Nhập giá mua sản phẩm");
-        double purchasePrice=Double.parseDouble(scanner.nextLine());
-        System.out.println("Nhập giá bán sản phẩm");
-        double sellingPrice=Double.parseDouble(scanner.nextLine());
+        System.out.println("Nhập giá mua sản phẩm (VND)");
+        int purchasePrice=Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập giá bán sản phẩm (VND)");
+        int sellingPrice=Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập số lượng bán");
         int sellingQty=Integer.parseInt(scanner.nextLine());
 
@@ -51,7 +51,7 @@ public class ProductService {
     }
 
     public double interest( double purchasePrice, double sellingPrice, int sellingQty){
-        return (double) (sellingPrice-purchasePrice)*sellingQty;
+        return (sellingPrice-purchasePrice)*sellingQty;
     }
 
     public void print(Product[] products){
