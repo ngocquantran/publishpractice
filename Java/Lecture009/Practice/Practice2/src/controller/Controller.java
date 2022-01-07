@@ -96,8 +96,7 @@ public class Controller {
         Product product=service.searchById(products,id);
         System.out.println(product);
 
-        boolean isContinue=true;
-        while (isContinue){
+
             submenu();
             int choice=Integer.parseInt(scanner.nextLine());
             switch (choice){
@@ -106,27 +105,23 @@ public class Controller {
                     String newName= scanner.nextLine();
                     System.out.println("Nhập giá sản phẩm mới");
                     long newPrice= scanner.nextLong();
+                    scanner.nextLine();
                     service.updateNameAndPrice(product,newName,newPrice);
                     System.out.println("Danh sách sau khi cập nhật");
                     service.show(products);
-                    isContinue=false;
                     break;
+
                 case 2:
                     System.out.println("Danh sách sau khi xóa");
                     service.removeProduct(products,product);
                     service.show(products);
-                    isContinue=false;
                     break;
                 case 3:
+                    break;
 
-                    isContinue=false;
-                    break;
-                default:
-                    System.out.println("Không có lựa chọn này, vui lòng chọn lại");
-                    break;
             }
 
-        }
+
 
 
 
