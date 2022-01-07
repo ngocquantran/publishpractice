@@ -87,14 +87,22 @@ public class ProductService {
 
     }
 
-
+//    public void updatePrice(model.Product product,long newPrice){
+//        product.setPrice(newPrice);
+//        System.out.println(product);
+//    }
 
     public void removeProduct(ArrayList<Product> products, Product product){
-
-        products.remove(product);
+                products.remove(product);
     }
 
-
+//    public void removeProduct2(ArrayList<model.Product> products,int id){
+//        for (model.Product p:products){
+//            if (p.getId()==id){
+//                products.remove(p);
+//            }
+//        }
+//    }
 
     public Product createProduct(){
         Scanner scanner=new Scanner(System.in);
@@ -109,6 +117,26 @@ public class ProductService {
         int quantity=Integer.parseInt(scanner.nextLine());
 
         ProductType productType = ProductType.A;
+//        int type;
+//        do {
+//            System.out.println("Nhập loại sản phẩm (1-đồ gia dụng / 2-thực phẩm / 3-thời trang");
+//            type=Integer.parseInt(scanner.nextLine());
+//        }
+//        while (type!=1&&type!=2&&type!=3);
+//        switch (type){
+//            case 1:
+//                productType=model.ProductType.A;
+//                break;
+//            case 2:
+//                productType=model.ProductType.B;
+//                break;
+//            case 3:
+//                productType=model.ProductType.C;
+//                break;
+//            default:
+//                System.out.println();
+//
+//        }
         getInputType();
 
         System.out.println("Nhập số lượng bán");
