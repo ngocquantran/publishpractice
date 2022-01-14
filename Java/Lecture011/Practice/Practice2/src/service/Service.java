@@ -1,3 +1,5 @@
+package service;
+import model.Account;
 import java.security.PublicKey;
 import java.sql.SQLOutput;
 import java.util.AbstractCollection;
@@ -121,12 +123,12 @@ public class Service {
 
 
 
-    public Account updateUsername(Account account,String newUsername){
+    public Account updateUsername(Account account, String newUsername){
         account.setUsername(newUsername);
         return account;
     }
 
-    public Account updateEmail(Account account,String newEmail){
+    public Account updateEmail(Account account, String newEmail){
         account.setEmail(newEmail);
         return account;
     }
