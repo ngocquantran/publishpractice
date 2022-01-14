@@ -14,6 +14,7 @@ public class Controller {
     static Scanner scanner=new Scanner(System.in);
 
     public static void mainMenu(){
+        System.out.println("------------------------------");
         System.out.println("1 - Đăng nhập");
         System.out.println("2 - Đăng ký");
         System.out.println("0 - Thoát chương trình");
@@ -21,6 +22,7 @@ public class Controller {
     }
 
     public static void submenu1(){
+        System.out.println("------------------------------");
         System.out.println("1 - Thay đổi username");
         System.out.println("2 - Thay đổi email");
         System.out.println("3 - Thay đổi mật khẩu");
@@ -30,6 +32,7 @@ public class Controller {
     }
 
     public static void submenu2(){
+        System.out.println("------------------------------");
         System.out.println("1 - Đăng nhập lại");
         System.out.println("2 - Quên mật khẩu");
     }
@@ -48,6 +51,7 @@ public class Controller {
                             isContinue=false;
                         }else {
                             System.out.println("Kiểm tra lại username");
+                            program();
                         }
                     }
                     System.out.println("Nhập password");
@@ -56,6 +60,7 @@ public class Controller {
                         subprogram1();
                     }
                     else {
+                        System.out.println("Mật khẩu không đúng");
                         subprogram2();
                     }
                     break;
