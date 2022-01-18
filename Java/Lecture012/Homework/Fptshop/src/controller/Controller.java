@@ -50,6 +50,9 @@ public class Controller {
                     String name= scanner.nextLine();
                     service.searchByName(products, name);
                     break;
+                case 6:
+                    service.countCategory(products);
+                    break;
                 case 0:
                     System.exit(0);
                     break;

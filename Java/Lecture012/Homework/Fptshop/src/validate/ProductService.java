@@ -138,18 +138,16 @@ public class ProductService {
         }
     }
 
-    public void countByBrand(ArrayList<Product> products){
-        ArrayList<String> brands=getAllBrand(products);
-        for (int i=0;i< brands.size();i++){
+    public void countCategory(ArrayList<Product> products){
+
+        for(ProductCategory p:ProductCategory.values()){
             int count=0;
-            for (int j=0;j< products.size();j++){
-                if (brands.get(i).equals(products.get(j))){
-                    count++;
-                }
-            }
-            System.out.println("Danh mục "+brands.get(i)+": "+count+" sản phẩm");
+         for (int i=0;i< products.size();i++){
+             if (Arrays.toString(products.get(i).getCategories()).contains(p.toString())){
+                 count++;
+          }
+         }
+            System.out.println("Danh mục "+p.getType()+" có "+count+" sản phẩm");
         }
     }
-
-
 }
