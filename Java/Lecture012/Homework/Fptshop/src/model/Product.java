@@ -11,7 +11,7 @@ public class Product {
     private int quantity;
     private int sellingQuantity;
     private String brand;
-    private ProductCategory[] categories= ProductCategory.values();
+    private ProductCategory[] categories;
 
     public Product(int id, String name, String description, long price, int quantity, int sellingQuantity, String brand, ProductCategory[] categories) {
         this.id = id;
