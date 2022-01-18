@@ -1,7 +1,7 @@
 package controller;
 
 import model.Product;
-import validate.ProductService;
+import service.ProductService;
 import validate.Validate;
 
 import java.util.ArrayList;

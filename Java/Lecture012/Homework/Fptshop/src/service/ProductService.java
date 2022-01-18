@@ -1,4 +1,4 @@
-package validate;
+package service;
 
 import model.Product;
 import model.ProductCategory;
