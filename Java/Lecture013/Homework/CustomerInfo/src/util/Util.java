@@ -1,7 +1,10 @@
+package util;
+
+import model.Customer;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -70,7 +73,7 @@ public class Util {
     }
 
 //    Kiểm tra ID có bị trùng lặp
-    public static boolean duplicateId(ArrayList<Customer> customers,String id){
+    public static boolean duplicateId(ArrayList<Customer> customers, String id){
         int found=0;
         for (Customer c:customers){
             if (c.getId().equals(id)){

@@ -1,3 +1,7 @@
+package model;
+
+import util.Util;
+
 import java.time.LocalDate;
 
 public class Customer {

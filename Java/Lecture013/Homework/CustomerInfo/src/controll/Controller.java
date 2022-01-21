@@ -1,3 +1,10 @@
+package controll;
+
+import model.Customer;
+import model.Gender;
+import util.Validate;
+import service.Service;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,7 +35,7 @@ public class Controller {
         boolean isContinue=true;
         while (isContinue){
             menu();
-            int choice=Validate.inputNumber();
+            int choice= Validate.inputNumber();
             switch (choice){
                 case 1:
                     System.out.println("Thông tin toàn bộ khách hàng: ");
@@ -64,7 +71,7 @@ public class Controller {
         boolean isContinue=true;
         while (isContinue){
             submenu();
-            int choice=Validate.inputNumber();
+            int choice= Validate.inputNumber();
             switch (choice){
                 case 1:
                     service.updateCustomer(customers,index);

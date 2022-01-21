@@ -1,4 +1,10 @@
-import java.sql.SQLOutput;
+package service;
+
+import model.Customer;
+import model.Gender;
+import util.Util;
+import util.Validate;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,13 +15,13 @@ public class Service {
 
     public ArrayList<Customer> getAllCustomer(){
         ArrayList<Customer> customers=new ArrayList<>();
-        customers.add(new Customer("KH123456","Nam", LocalDate.of(1996,8,20),Gender.MALE,"Hà Nam","0983658795","nam@gmail.com"));
-        customers.add(new Customer("KH256984","Nga", LocalDate.of(1994,6,15),Gender.FEMALE,"Nam Định","0963589641","nga@gmail.com"));
-        customers.add(new Customer("KH562845","Hoàng", LocalDate.of(1995,5,16),Gender.MALE,"Lào Cai","0922368125","hoang@gmail.com"));
-        customers.add(new Customer("KH268954","Lan", LocalDate.of(1997,7,17),Gender.FEMALE,"Ninh Bình","0963896877","lan@gmail.com"));
-        customers.add(new Customer("KH289657","Lâm", LocalDate.of(1992,4,18),Gender.MALE,"Hưng Yên","0989636999","lam@gmail.com"));
-        customers.add(new Customer("KH258963","Vân", LocalDate.of(1991,3,11),Gender.FEMALE,"Hải Dương","0856145896","van@gmail.com"));
-        customers.add(new Customer("KH258947","Trang", LocalDate.of(1998,9,5),Gender.FEMALE,"Bắc Ninh","0265896363","trang@gmail.com"));
+        customers.add(new Customer("KH123456","Nam", LocalDate.of(1996,8,20), Gender.MALE,"Hà Nam","0983658795","nam@gmail.com"));
+        customers.add(new Customer("KH256984","Nga", LocalDate.of(1994,6,15), Gender.FEMALE,"Nam Định","0963589641","nga@gmail.com"));
+        customers.add(new Customer("KH562845","Hoàng", LocalDate.of(1995,5,16), Gender.MALE,"Lào Cai","0922368125","hoang@gmail.com"));
+        customers.add(new Customer("KH268954","Lan", LocalDate.of(1997,7,17), Gender.FEMALE,"Ninh Bình","0963896877","lan@gmail.com"));
+        customers.add(new Customer("KH289657","Lâm", LocalDate.of(1992,4,18), Gender.MALE,"Hưng Yên","0989636999","lam@gmail.com"));
+        customers.add(new Customer("KH258963","Vân", LocalDate.of(1991,3,11), Gender.FEMALE,"Hải Dương","0856145896","van@gmail.com"));
+        customers.add(new Customer("KH258947","Trang", LocalDate.of(1998,9,5), Gender.FEMALE,"Bắc Ninh","0265896363","trang@gmail.com"));
         return customers;
 
     }
@@ -29,20 +35,20 @@ public class Service {
 
 //    Chọn giới tính để xem thông tin
     public Gender chooseGender(){
-        Gender gender=Gender.FEMALE;
+        Gender gender= Gender.FEMALE;
         System.out.println("1 - Khách hàng nam");
         System.out.println("2 - Khách hàng nữ");
         System.out.println("Lựa chọn của bạn là");
         boolean isContinue=true;
         while (isContinue){
-            int choice=Validate.inputNumber();
+            int choice= Validate.inputNumber();
             switch (choice){
                 case  1:
-                    gender=Gender.MALE;
+                    gender= Gender.MALE;
                     isContinue=false;
                     break;
                 case 2:
-                    gender=Gender.FEMALE;
+                    gender= Gender.FEMALE;
                     isContinue=false;
                     break;
                 default:
@@ -55,7 +61,7 @@ public class Service {
     }
 
 //    In dữ liệu khách hàng theo giới tính đã chọn
-    public void showByGender(Gender gender,ArrayList<Customer> customers){
+    public void showByGender(Gender gender, ArrayList<Customer> customers){
         for (Customer c:customers){
             if (c.getGender()==gender){
                 System.out.println(c);
@@ -68,13 +74,13 @@ public class Service {
     public ArrayList<Customer> addCustomer(ArrayList<Customer> customers){
 
             System.out.println("Nhập mã khách hàng");
-            String id=Util.isId();
+            String id= Util.isId();
             if (!Util.duplicateId(customers,id)){
                 System.out.println("Nhập tên khách hàng");
                 String name= scanner.nextLine();
 
                 System.out.println("Nhập ngày sinh khách hàng (dd/MM/yyyy)");
-                LocalDate birthday=Validate.isDateFormat();
+                LocalDate birthday= Validate.isDateFormat();
 
                 System.out.println("Chọn giới tính");
                 Gender gender=chooseGender();
@@ -83,10 +89,10 @@ public class Service {
                 String address= scanner.nextLine();
 
                 System.out.println("Nhập số điện thoại");
-                String phoneNumber=Util.isPhoneNumber();
+                String phoneNumber= Util.isPhoneNumber();
 
                 System.out.println("Nhập email");
-                String email=Util.isEmail();
+                String email= Util.isEmail();
 
                 customers.add(new Customer(id,name,birthday,gender,address,phoneNumber,email));
             }

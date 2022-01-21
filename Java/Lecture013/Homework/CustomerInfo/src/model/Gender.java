@@ -1,3 +1,5 @@
+package model;
+
 public enum Gender {
     MALE("Nam"), FEMALE("Nữ");
 
