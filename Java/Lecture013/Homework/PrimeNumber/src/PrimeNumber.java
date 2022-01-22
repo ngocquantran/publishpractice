@@ -41,11 +41,8 @@ public class PrimeNumber {
 
 
     public static void exitPath(String str){
-        String exitSign="qxQX";
-        for (int i=0;i< exitSign.length();i++){
             if (str.equalsIgnoreCase("q") || str.equalsIgnoreCase("x")){
                 System.exit(0);
-            }
         }
     }
 
