@@ -9,6 +9,7 @@ import util.Util;
 import util.Validate;
 
 import java.sql.SQLOutput;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -106,6 +107,8 @@ public class Controller {
                     System.out.println("Đăng kí thành công");
                     break;
                 case 0:
+                    System.out.println();
+                    System.out.println("Hẹn gặp lại");
                     System.exit(0);
                     break;
                 default:
@@ -444,6 +447,28 @@ public class Controller {
             }
         }
     }
+
+//    public static void viewExpMenu(){
+//        System.out.println("1 - Sản phẩm đã hết hạn");
+//        System.out.println("2 - Sản phẩm sẽ hết hạn trong 30 ngày");
+//        System.out.println("3 - Sản phẩm sẽ hết hạn trong 60 ngày");
+//        System.out.println("Lựa chọn của bạn là");
+//
+//    }
+//
+//    public static void viewExpProgram(){
+//        boolean isContinue=true;
+//        while (isContinue){
+//            viewExpMenu();
+//            LocalDate today=LocalDate.now();
+//            int choice=Validate.inputNumber();
+//            switch (choice){
+//                case 1:
+//                    products.stream().filter(product -> product.getMfg()+product.getExp()*30-today<=0)
+//
+//            }
+//        }
+//    }
 }
 
 

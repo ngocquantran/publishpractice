@@ -99,8 +99,13 @@ public class ProductService {
         while (isContinue){
             int choice= Validate.inputNumber();
             if (choice<= list.size()){
-                brand=list.get((choice-1));
-                isContinue=false;
+                if (choice<=0){
+                    System.out.println("Không có lựa chọn này");
+                }else {
+                    brand=list.get((choice-1));
+                    isContinue=false;
+                }
+
             }
             else {
                 System.out.println("Không có lựa chọn này");
