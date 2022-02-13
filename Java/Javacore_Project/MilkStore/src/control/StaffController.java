@@ -304,7 +304,7 @@ public class StaffController {
     public static void productManagementMenu(){
         System.out.println("--------------------------------");
         System.out.println("1 - Sửa thông tin sản phẩm");
-        System.out.println("2 - Thêm sản phẩm");
+        System.out.println("2 - Thêm sản phẩm mới");
         System.out.println("3 - Xóa sản phẩm");
         System.out.println("0 - Trở về");
         System.out.println("Lựa chọn của bạn là");
@@ -361,11 +361,10 @@ public class StaffController {
                     System.out.println("Nhập hạn sử dụng (tháng)");
                     int newExp=Validate.inputNumberBiggerThanZero();
 
-                    System.out.println("Nhập số lượng sản phẩm nhập");
+                    System.out.println("Nhập số lượng nhập sản phẩm");
                     int newQuantity=Validate.inputNumberBiggerThanZero();
 
-                    System.out.println("Nhập số lượng sản phẩm đã bán");
-                    int newSoldQuantity=Validate.inputInLimit(0,newQuantity);
+                    int newSoldQuantity=0;
 
                     System.out.println("Nhập xuất xứ sản phẩm");
                     String newOrigin= scanner.nextLine();
@@ -499,6 +498,8 @@ public class StaffController {
                     for (int i=0;i<Controller.accounts.size();i++){
                         if (Controller.accounts.get(i).getId().equals(lockId) && Controller.accounts.get(i).getRole()==AccountRole.Staff){
                             Controller.accounts.get(i).setRole(AccountRole.Visitor);
+                            Controller.accounts.get(i).setPassword("!@#$%^&*(");
+                            System.out.println("Khóa tài khoản thành công");
                             found2++;
                             break;
                         }

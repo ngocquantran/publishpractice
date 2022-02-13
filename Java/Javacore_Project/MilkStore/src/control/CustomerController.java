@@ -144,6 +144,7 @@ public class CustomerController {
                             if (p.getItemId().equals(c.getId())){
                                 c.setQuantity(c.getQuantity()-p.getQuantity());
                                 c.setSoldQuantity(c.getSoldQuantity()+p.getQuantity());
+                                c.setStatus(Util.showStatus(c.getQuantity()));
 
                             }
                         }

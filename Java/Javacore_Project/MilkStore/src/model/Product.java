@@ -30,7 +30,7 @@ public class Product {
         this.soldQuantity = soldQuantity;
         this.origin = origin;
         this.price = price;
-        this.status = Util.showStatus(getQuantity());
+        this.status = Util.showStatus(quantity);
     }
 
     public String getId() {
