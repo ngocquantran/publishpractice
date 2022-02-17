@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 17, 2022 at 08:16 AM
+-- Generation Time: Feb 17, 2022 at 08:36 AM
 -- Server version: 8.0.28
 -- PHP Version: 8.0.15
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `blog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `author`
+--
+
+CREATE TABLE `author` (
+  `id` int NOT NULL,
+  `name` text NOT NULL,
+  `birth` text NOT NULL,
+  `nationality` text NOT NULL,
+  `avatar` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -46,13 +60,13 @@ CREATE TABLE `post` (
   `id` int NOT NULL,
   `title` text NOT NULL,
   `description` text NOT NULL,
-  `users_id` int NOT NULL,
+  `author_id` int NOT NULL,
   `thumbnail` text NOT NULL,
   `status` text NOT NULL,
   `create_at` date NOT NULL,
   `published_at` date NOT NULL,
   `view_count` int NOT NULL,
-  `vote_score` int DEFAULT NULL,
+  `vote_score` int NOT NULL,
   `post_type` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -98,6 +112,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `author`
+--
+ALTER TABLE `author`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `discuss`
 --
 ALTER TABLE `discuss`
@@ -110,7 +130,7 @@ ALTER TABLE `discuss`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `users_id` (`users_id`);
+  ADD KEY `author_id` (`author_id`);
 
 --
 -- Indexes for table `post_tag`
@@ -134,6 +154,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `author`
+--
+ALTER TABLE `author`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `discuss`
@@ -174,7 +200,7 @@ ALTER TABLE `discuss`
 -- Constraints for table `post`
 --
 ALTER TABLE `post`
-  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`);
 
 --
 -- Constraints for table `post_tag`
