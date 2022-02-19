@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 19, 2022 at 07:59 AM
+-- Generation Time: Feb 19, 2022 at 09:53 AM
 -- Server version: 8.0.28
 -- PHP Version: 8.0.15
 
@@ -98,28 +98,34 @@ INSERT INTO `color` (`id`, `color`) VALUES
 --
 
 CREATE TABLE `color_product` (
-  `color_id` int NOT NULL,
-  `product_id` int NOT NULL
+  `product_id` int NOT NULL,
+  `color_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `color_product`
 --
 
-INSERT INTO `color_product` (`color_id`, `product_id`) VALUES
+INSERT INTO `color_product` (`product_id`, `color_id`) VALUES
 (2, 1),
-(4, 1),
-(5, 1),
-(6, 1),
 (2, 2),
+(2, 4),
 (3, 2),
+(3, 5),
+(4, 1),
 (4, 2),
+(4, 4),
+(5, 1),
 (5, 2),
 (5, 3),
+(6, 1),
 (6, 3),
-(2, 4),
-(4, 4),
-(3, 5);
+(7, 1),
+(7, 2),
+(8, 1),
+(9, 6),
+(10, 2),
+(10, 4);
 
 -- --------------------------------------------------------
 
@@ -239,38 +245,38 @@ INSERT INTO `size` (`id`, `size`) VALUES
 --
 
 CREATE TABLE `size_product` (
-  `size_id` int NOT NULL,
-  `product_id` int NOT NULL
+  `product_id` int NOT NULL,
+  `size_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `size_product`
 --
 
-INSERT INTO `size_product` (`size_id`, `product_id`) VALUES
-(1, 1),
-(2, 1),
-(3, 1),
-(5, 1),
-(7, 1),
-(8, 1),
+INSERT INTO `size_product` (`product_id`, `size_id`) VALUES
 (1, 2),
-(2, 2),
-(3, 2),
-(5, 2),
-(6, 2),
-(7, 2),
 (1, 3),
-(2, 3),
-(3, 3),
-(5, 3),
-(6, 3),
-(7, 3),
 (1, 4),
+(2, 1),
+(2, 2),
+(2, 3),
+(3, 1),
+(3, 2),
+(3, 3),
 (4, 4),
+(5, 1),
+(5, 2),
+(5, 3),
 (5, 4),
+(6, 2),
+(6, 3),
+(7, 1),
+(7, 2),
+(7, 3),
 (8, 6),
-(8, 7);
+(8, 7),
+(9, 1),
+(10, 8);
 
 --
 -- Indexes for dumped tables
