@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 21, 2022 at 10:23 AM
+-- Generation Time: Feb 22, 2022 at 07:13 AM
 -- Server version: 8.0.28
 -- PHP Version: 8.0.15
 
@@ -49,7 +49,8 @@ CREATE TABLE `book` (
   `id_publisher` int NOT NULL,
   `page` int DEFAULT NULL,
   `thumbnail` text,
-  `description` text
+  `description` text,
+  `price` bigint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
