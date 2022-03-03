@@ -32,7 +32,7 @@ public class Validate {
         return (found>0);
     }
 
-    public static boolean isIdAPostAvailable(ArrayList<Post> posts,int id){
+    public static boolean isIdAPostAvailable(ArrayList<Post> posts, int id){
         int found=0;
         for (Post p:posts){
             if (id==p.getId()){
