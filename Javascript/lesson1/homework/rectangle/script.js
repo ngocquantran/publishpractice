@@ -11,6 +11,10 @@ function inputNumber(number,action) {
         if (isNaN(number)) {
           console.log("Bạn cần nhập số");
         }
+        if (number <= 0) {
+            console.log("Vui lòng nhập giá trị > 0");
+            number = NaN;
+        }
     }
     return number;
 }
