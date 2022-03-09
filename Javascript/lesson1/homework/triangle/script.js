@@ -28,7 +28,7 @@ let isTriangle = a + b > c && a + c > b && b + c > a;
 
 if (isTriangle) {
     let result = findArea(a, b, c);
-    console.log("Diện tích tam giác", result);
+    console.log("Diện tích tam giác", result.toFixed(2));
 } else { 
     console.log("Ba kích thước trên không thỏa mãn điều kiện tạo thành tam giác");
 }
