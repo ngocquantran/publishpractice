@@ -1,4 +1,6 @@
 function findSentence(sentence) {
+    document.getElementById("key").innerHTML = "Tìm câu chứa từ: ";
+    document.getElementById("input").innerHTML = sentence;
     let word = prompt("Nhập từ cần tìm: ");
     let copy = nonAccentVietnamese(sentence);  
     let copyword = nonAccentVietnamese(word);
@@ -11,8 +13,7 @@ function findSentence(sentence) {
         }
     }
     // console.log(result);
-    document.getElementById("key").innerHTML = "Tìm câu chứa từ: ";
-    document.getElementById('input').innerHTML = sentence;
+    
     document.getElementById("descript").innerHTML = "Câu đầu tiên chứa từ: "+word;
     document.getElementById("result").innerHTML = result;
 }
