@@ -1,21 +1,25 @@
 function findSentence(sentence) {
-    document.getElementById("key").innerHTML = "Tìm câu chứa từ: ";
-    document.getElementById("input").innerHTML = sentence;
-    let word = prompt("Nhập từ cần tìm: ");
-    let copy = nonAccentVietnamese(sentence);  
-    let copyword = nonAccentVietnamese(word);
-    let pattern = new RegExp("\\b[\\s\\w]*" + copyword + "\\b[\\s\\w]*\\b[.]");
-    let result = copy.match(pattern);
-    let list = getOriginalSentence(sentence);
-    for (let i = 0; i < list.length; i++){
-        if (nonAccentVietnamese(list[i]) == result) {
-            result = list[i];
-        }
+  document.getElementById("key").innerHTML = "Tìm câu chứa từ: ";
+  document.getElementById("input").innerHTML = sentence;
+  let word = prompt("Nhập từ cần tìm: ");
+//   setTimeout(function () {
+//     let word = prompt("Nhập từ cần tìm: ");
+//   }, 1000);
+  let copy = nonAccentVietnamese(sentence);
+  let copyword = nonAccentVietnamese(word);
+  let pattern = new RegExp("\\b[\\s\\w]*" + copyword + "\\b[\\s\\w]*\\b[.]?");
+  let result = copy.match(pattern);
+  let list = getOriginalSentence(sentence);
+  for (let i = 0; i < list.length; i++) {
+    if (nonAccentVietnamese(list[i]) == result) {
+      result = list[i];
     }
-    // console.log(result);
-    
-    document.getElementById("descript").innerHTML = "Câu đầu tiên chứa từ: "+word;
-    document.getElementById("result").innerHTML = result;
+  }
+  // console.log(result);
+
+  document.getElementById("descript").innerHTML =
+    "Câu đầu tiên chứa từ: " + word;
+  document.getElementById("result").innerHTML = result;
 }
 
 function nonAccentVietnamese(str) {
@@ -41,15 +45,12 @@ function nonAccentVietnamese(str) {
 
 
 let sen =
-    "Trong tất cả các \"mùa\": mùa mà em thích nhất là mùa xuân!"+
-    " Vì khi mùa xuân tới, cũng là Tết, em được nghỉ học dài hơn, được bố " +
-    "mẹ mua cho quần áo đẹp, được đi chơi nhiều nơi hơn. Khi tới mùa xuân, cây " +
-    "cối đâm chồi nảy lộc sau giấc ngủ đông dài, mấy cây đào cũng nở những nụ hoa " +
-    "màu hồng thật đẹp. Thời tiết mùa xuân ấm áp, dễ chịu chứ không lạnh giá " +
-    "như mùa đông. Bố bảo, vào mùa xuân em cũng thêm một tuổi mới, vậy nên em " +
-    "thích mùa xuân còn vì đến mùa xuân em cảm thấy mình lớn hơn, trưởng " +
-    "thành hơn. Vào mùa xuân, trường em cũng tổ chức nhiều hoạt đông vui chơi " +
-    "hơn như đi dã ngoại, cắm trại, rồi các trò chơi dân gian trong giờ giải lao. Em rất thích mùa xuân.";
+  "Những suy đOán xung quanh TƯƠNG lai của cầu THỦ 37 tuổi và những " +
+  "lời chỉ trích Anh phải nhận đã liên tục NỔ ra trong vài tuần gần " +
+  "đây. Nhưng Neville tin rằng vấn đề lớn nhất của Man United là hàng " +
+  "phòng ngự kém và thiếu nhất quán của họ: “Hàng thủ Manchester United " +
+  "không tốt lắm, tôi phải nói thẳng; Họ quá mâu thuẫn và không đáng tin " +
+  "cậy! Bạn không thể thực sự tin tưởng họ? BạN không biết điều gì sẽ xảy ra khi hỌ chơi quá lỏng lẻo";
 
 function getOriginalSentence(paragragh) {
     let str = paragragh.replaceAll(/\?|!/g, ".");
