@@ -5,21 +5,23 @@ function findSentence(sentence) {
 //   setTimeout(function () {
 //     let word = prompt("Nhập từ cần tìm: ");
 //   }, 1000);
-  let copy = nonAccentVietnamese(sentence);
-  let copyword = nonAccentVietnamese(word);
-  let pattern = new RegExp("\\b[\\s\\w]*" + copyword + "\\b[\\s\\w]*\\b[.]?");
-  let result = copy.match(pattern);
-  let list = getOriginalSentence(sentence);
-  for (let i = 0; i < list.length; i++) {
-    if (nonAccentVietnamese(list[i]) == result) {
-      result = list[i];
+  if (word) { 
+    let copy = nonAccentVietnamese(sentence);
+    let copyword = nonAccentVietnamese(word);
+    let pattern = new RegExp("\\b[\\s\\w]*" + copyword + "\\b[\\s\\w]*\\b[.]?");
+    let result = copy.match(pattern);
+    let list = getOriginalSentence(sentence);
+    for (let i = 0; i < list.length; i++) {
+      if (nonAccentVietnamese(list[i]) == result) {
+        result = list[i];
+      }
     }
-  }
-  // console.log(result);
+    // console.log(result);
 
-  document.getElementById("descript").innerHTML =
-    "Câu đầu tiên chứa từ: " + word;
-  document.getElementById("result").innerHTML = result;
+    document.getElementById("descript").innerHTML = "Câu đầu tiên chứa từ: " + word;
+    document.getElementById("result").innerHTML = result;
+  }
+  
 }
 
 function nonAccentVietnamese(str) {
