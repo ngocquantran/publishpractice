@@ -75,7 +75,7 @@ html{
 }
 
 input:focus{
-    border: none;
+    outline: none;
 }
 
 .result, .comment {
