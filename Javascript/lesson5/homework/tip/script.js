@@ -6,12 +6,17 @@ $(function () {
     const $calculate = $('.calculate');
     const $result = $('.result');
     const $selection = $('.selection');
+    const $warn = $('.warn');
 
     function getTip() {
         let billAmount = document.querySelector(".amount-input").value;
         let guestNumber = document.querySelector(".guests-input").value;
         // let percentage = document.querySelector(".selected-quality").value;
-        let percentage = document.querySelector(".selection").value;
+      let percentage = document.querySelector(".selection").value;
+
+      $warn.hide();
+      
+
         
         
         billAmount = parseFloat(billAmount);
@@ -25,15 +30,14 @@ $(function () {
             if (Number.isInteger(guestNumber) && guestNumber > 0 && billAmount > 0) {
             let tip;
               tip = ((billAmount * percentage) / guestNumber).toFixed(2);
+                $result.show();
                 $tip.text("$" + tip);
                 console.log(tip);     
             } else {
-              $result.text("Wrong input. Please check again");
+                $result.hide();
+                $warn.show();
             }
-        }
-        
-           
-        
+        }    
         
     }
     getTip();

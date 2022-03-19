@@ -87,7 +87,7 @@ input:focus{
     padding-left: 10px;
 }
 
-.result {
+.result, .warn {
     margin-top: 30px;
     text-align: center;
     font-size: 1.6rem;
