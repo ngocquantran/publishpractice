@@ -35,8 +35,7 @@
     display: block;
   }
 
-  .place-list .col-3 {
-    width: 100%;
+  .place-list .place-item {
     margin-bottom: 15px;
   }
 
@@ -44,12 +43,13 @@
     margin-bottom: 15px;
   }
 
+  .mobile-col-1 {
+    width: 100%;
+  }
+
   .contact-form .row,
   .contact-content {
     display: block;
   }
 
-  .contact-content .col-2 {
-    width: 100%;
-  }
 }
